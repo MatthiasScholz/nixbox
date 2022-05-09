@@ -25,3 +25,6 @@ build-x86_64: nixos-x86_64.json
 	packer build --only=${BUILDERS} $<
 
 .PHONY: all update update_iso update_template build-i686 build-x86_64
+
+gen-ssh-key:
+	ssh-keygen -f ./scripts/install_rsa -t ecdsa -b 521
