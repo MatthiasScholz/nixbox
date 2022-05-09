@@ -19,8 +19,8 @@
       "ssh_username": "nixos",
       "headless": true,
       "type": "virtualbox-iso",
-      "iso_url": "https://releases.nixos.org/nixos/21.05/nixos-21.05.3443.ee90403e147/nixos-minimal-21.05.3443.ee90403e147-x86_64-linux.iso",
-      "iso_checksum": "7fec8949043bca97c6930177af868532219aa4037017f2f6122094035eeafb1c",
+      "iso_url": "https://releases.nixos.org/nixos/21.11/nixos-21.11.337311.fd3e33d696b/nixos-minimal-21.11.337311.fd3e33d696b-x86_64-linux.iso",
+      "iso_checksum": "b2b503a9a5ba6cc88334f9ebe988dd900db8cfd632ecc00d440558412d64a332",
       "guest_additions_mode": "disable",
       "format": "ova",
       "guest_os_type": "Linux_64",
@@ -53,8 +53,8 @@
       "ssh_username": "nixos",
       "headless": true,
       "type": "qemu",
-      "iso_url": "https://releases.nixos.org/nixos/21.05/nixos-21.05.3443.ee90403e147/nixos-minimal-21.05.3443.ee90403e147-x86_64-linux.iso",
-      "iso_checksum": "7fec8949043bca97c6930177af868532219aa4037017f2f6122094035eeafb1c",
+      "iso_url": "https://releases.nixos.org/nixos/21.11/nixos-21.11.337311.fd3e33d696b/nixos-minimal-21.11.337311.fd3e33d696b-x86_64-linux.iso",
+      "iso_checksum": "b2b503a9a5ba6cc88334f9ebe988dd900db8cfd632ecc00d440558412d64a332",
       "disk_interface": "virtio-scsi",
       "disk_size": "{{ user `disk_size` }}",
       "format": "qcow2",
@@ -84,8 +84,8 @@
       "headless": true,
       "type": "hyperv-iso",
       "generation": 1,
-      "iso_url": "https://releases.nixos.org/nixos/21.05/nixos-21.05.3443.ee90403e147/nixos-minimal-21.05.3443.ee90403e147-x86_64-linux.iso",
-      "iso_checksum": "7fec8949043bca97c6930177af868532219aa4037017f2f6122094035eeafb1c",
+      "iso_url": "https://releases.nixos.org/nixos/21.11/nixos-21.11.337311.fd3e33d696b/nixos-minimal-21.11.337311.fd3e33d696b-x86_64-linux.iso",
+      "iso_checksum": "b2b503a9a5ba6cc88334f9ebe988dd900db8cfd632ecc00d440558412d64a332",
       "memory": "{{ user `memory` }}",
       "disk_size": "{{ user `disk_size` }}",
       "enable_secure_boot": false,
@@ -95,7 +95,7 @@
       "ssh_timeout": "1h"
     },
     {
-      "boot_wait": "45s",
+      "boot_wait": "120s",
       "boot_command": [
         "echo http://{{ .HTTPIP }}:{{ .HTTPPort}} > .packer_http<enter>",
         "mkdir -m 0700 .ssh<enter>",
@@ -109,8 +109,8 @@
       "ssh_username": "nixos",
       "headless": true,
       "type": "vmware-iso",
-      "iso_url": "https://releases.nixos.org/nixos/21.05/nixos-21.05.3443.ee90403e147/nixos-minimal-21.05.3443.ee90403e147-x86_64-linux.iso",
-      "iso_checksum": "7fec8949043bca97c6930177af868532219aa4037017f2f6122094035eeafb1c",
+      "iso_url": "https://releases.nixos.org/nixos/21.11/nixos-21.11.337311.fd3e33d696b/nixos-minimal-21.11.337311.fd3e33d696b-x86_64-linux.iso",
+      "iso_checksum": "b2b503a9a5ba6cc88334f9ebe988dd900db8cfd632ecc00d440558412d64a332",
       "memory": "{{ user `memory` }}",
       "disk_size": "{{ user `disk_size` }}",
       "guest_os_type": "Linux"
@@ -133,7 +133,7 @@
           "qemu",
           "hyperv-iso"
         ],
-        "output": "nixos-21.05-{{.Provider}}-x86_64.box"
+        "output": "nixos-21.11-{{.Provider}}-x86_64.box"
       }
     ]
   ]
