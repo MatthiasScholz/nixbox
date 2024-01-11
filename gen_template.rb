@@ -62,7 +62,7 @@ def gen_template(
         type: 'virtualbox-iso',
         iso_url: iso_url,
         iso_checksum: iso_sha256,
-        guest_additions_mode: 'disable',
+        guest_additions_mode: 'enable',
         format: 'ova',
         guest_os_type: guest_os_type,
         disk_size: '{{ user `disk_size` }}',
